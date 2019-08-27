@@ -1,4 +1,5 @@
 #Lists
+#List is mutable data structure
 
 #Empty list creation
 my_list = []
