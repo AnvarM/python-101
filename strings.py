@@ -72,3 +72,8 @@ print("%(x)i + %(y)i = %(z)i" % {"x":1, "y":2, "z":3}) #print '1 + 2 = 3'
 "Python is as simple as {1}, {0}, {2}".format("a", "b", "c") # result: 'Python is as simple as b, a, c'
 xy = {"x":0, "y":10}
 print("Graph a point at where x={x} and y={y}".format(**xy)) #print 'Graph a point at where x=0 and y=10' double asterisk - for correctly extracting values from dictionary
+
+
+# raw string vs regular string
+print("C:\Users\usr\data\test.txt") #will print C:\Users\usr\data   est.txt
+print(r"C:\Users\usr\data\test.txt") # will print C:\Users\usr\data\test.txt
