@@ -11,3 +11,5 @@ os.remove("test.txt") # will attempt to remove file "test.txt" from current dire
 os.rmdir("pytest") # will attempt to remove directory "pytest" from corrent directory
 os.removedirs() # with specified path will delete nested empty directories recursively
 os.rename("test.txt", "pytest.txt") # will rename file test.txt to pytest.txt if file test.txt exists in current directory
+os.startfile() # method start a file from argument with associated program
+os.walk() # iterate over a root level path
