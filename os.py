@@ -12,4 +12,17 @@ os.rmdir("pytest") # will attempt to remove directory "pytest" from corrent dire
 os.removedirs() # with specified path will delete nested empty directories recursively
 os.rename("test.txt", "pytest.txt") # will rename file test.txt to pytest.txt if file test.txt exists in current directory
 os.startfile() # method start a file from argument with associated program
-os.walk() # iterate over a root level path
+os.walk() # iterate over a root level path and return generator object, you may get elements from this object with help of next loop:
+    for root, dirs, files in os.walk(path):
+        print(root)
+       
+os.path.basename(r'C:\temp\1\2\1.txt') # will return just name of file - 1.txt       
+os.path.dirname(r'C:\temp\1\2\1.txt') # will return just name of directory - C:\\temp\\1\\2       
+os.path.exists() #  will tell you if a path exists or not, return boolean value
+os.path.isdir(path) # will check if path is directory
+os.path.isfile(path) # will check if path is file
+os.path.join() # join method give you the ability to join one or more path components together using the appropriate separator. For example, on Windows, the separator is the backslash, but on Linux, the separator is the forward slash
+os.path.join(r'C:\temp\1\2\3\4', 'test.py') # will return 'C:\\temp\\1\\2\\3\\4\\test.py'
+os.path.split(path) # will split a path into a tuple that contains the directory and the file.
+os.path.split(r'C:\temp\1\2\3.txt') # will return ('C:\\temp\\1\\2', '3.txt')
+os.path.split(r'C:\temp\1\2\3') # will return ('C:\\temp\\1\\2', '3') if filename is absent in path, it will return tuple with path without last dir and last directory in that path
