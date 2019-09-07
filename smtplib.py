@@ -1,17 +1,24 @@
 import smtplib
 
-HOST = "mySMTP.server.com"
-SUBJECT = "Test email from Python"
-TO = "mike@someAddress.org"
-FROM = "python@mydomain.com"
-text = "Python 3.4 rules them all!"
-BODY = "\r\n".join((
-    "From: %s" % FROM,
-    "To: %s" % TO,
-    "Subject: %s" % SUBJECT ,
+def send_email(host, subject, to_addr, from_addr, body_text):
+    """
+    Send an email
+    """
+    BODY = "\r\n".join((
+    "From: %s" % from_addr,
+    "To: %s" % to_addr,
+    "Subject: %s" % subject ,
     "",
-    text
+    body_text
     ))
-server = smtplib.SMTP(HOST)
-server.sendmail(FROM, [TO], BODY)
-server.quit()
+    server = smtplib.SMTP(host)
+    server.sendmail(from_addr, [to_addr], BODY)
+    server.quit()
+    
+if __name__ == "__main__":
+    host = "mySMTP.server.com"
+    subject = "Test email from Python"
+    to_addr = "to@address.org"
+    from_addr = "from@addres.com"
+    body_text = "Test message"
+    send_email(host, subject, to_addr, from_addr, body_text)    
