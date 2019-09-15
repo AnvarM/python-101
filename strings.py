@@ -73,6 +73,15 @@ print("%(x)i + %(y)i = %(z)i" % {"x":1, "y":2, "z":3}) #print '1 + 2 = 3'
 xy = {"x":0, "y":10}
 print("Graph a point at where x={x} and y={y}".format(**xy)) #print 'Graph a point at where x=0 and y=10' double asterisk - for correctly extracting values from dictionary
 
+# String formationg via format() method
+s = "test"
+print("This is a {}!".format(s)) # one more way to format strings
+
+
+# String formation via {str} (from python version >= 3.6)
+s = "test"
+s1 = "f-strings"
+print(f"Test to {s} new string formating method in python, called {s1}")
 
 # raw string vs regular string
 print("C:\Users\usr\data\test.txt") #will print C:\Users\usr\data   est.txt
