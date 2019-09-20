@@ -1,0 +1,1 @@
+python -m pdb debug_test.py # will run python debugger for python file
